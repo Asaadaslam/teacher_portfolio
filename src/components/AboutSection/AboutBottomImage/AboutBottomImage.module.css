@@ -1,0 +1,25 @@
+.aboutBottomImage{
+    width: 100%;
+    padding: 1.25rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+
+    border: 6px solid transparent; /* IMPORTANT */
+    border-radius: 12px;
+
+    background: 
+        linear-gradient(#F9FAFB, #F9FAFB) padding-box,
+        linear-gradient(to right, #1E3A8A, #10B981) border-box;
+}
+
+@media(max-width: 390px){
+    .aboutBottomImage{
+        padding: 42px 0px;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+}

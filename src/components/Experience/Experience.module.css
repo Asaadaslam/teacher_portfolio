@@ -1,0 +1,186 @@
+/* .portfolio{
+    width: 100%;
+    background-color: var(--background-black);
+    text-align: center;
+    padding: 9rem 32px;
+}
+
+.portfolio h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio span{
+    color: var(--logo-color);
+}
+
+.portfolio p{
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 6rem;
+}
+
+.myWork{
+    width: 100%;
+    display: grid;
+    gap: 5.9375rem;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+@media(max-width: 768px) {
+    .myWork{
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
+}
+
+@media(max-width: 390px) {
+    .myWork{
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
+
+/* components/Experience/Experience.module.css */
+/* components/Experience/Experience.module.css */
+
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 36px 48px 44px 62px;   /* thoda padding bhi adjust kiya */
+  width: 100%;                    /* important */
+  max-width: 820px;               /* ← Width barha di (pehle 720px thi) */
+  margin-bottom: 52px;
+  
+  box-shadow: 
+    0 20px 25px -5px rgb(0 0 0 / 0.08),
+    0 10px 10px -5px rgb(0 0 0 / 0.06),
+    0 0 0 1px rgb(255 255 255 / 0.6) inset;
+  
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  animation: cardEntrance 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  transform-style: preserve-3d;
+  perspective: 1500px;
+}
+
+@keyframes cardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card:hover {
+  transform: 
+    translateY(-20px) 
+    scale(1.03) 
+    rotateX(6deg) 
+    rotateY(5deg);
+  box-shadow: 
+    0 40px 70px -15px rgb(0 0 0 / 0.18),
+    0 25px 35px -10px rgb(0 0 0 / 0.15),
+    0 0 0 1px rgb(255 255 255 / 0.85) inset;
+}
+
+/* Left gradient bar */
+.accentBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(to bottom, #0ea5e9, #a855f7);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.card:hover .accentBar {
+  width: 14px;
+}
+
+/* Rest of the styles (same as before, sirf width ke hisaab se adjust) */
+.dateBadge {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 26px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+
+.title {
+  font-size: 29px;
+  font-weight: 700;
+  color: #1e2937;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.institution {
+  font-size: 23px;
+  font-weight: 600;
+  color: #7c3aed;
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 17.5px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 15px;
+  font-size: 16.8px;
+  color: #334155;
+  line-height: 1.65;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: achievementPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.achievement:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes achievementPop {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.achievement::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  width: 9px;
+  height: 9px;
+  background-color: #0ea5e9;
+  border-radius: 50%;
+}
+
+.card:hover .achievement::before {
+  transform: scale(1.35);
+}

@@ -1,0 +1,328 @@
+/* .contactUs{
+    width: 100%;
+    background-color: var( --background-gray);
+    padding: 9.625rem 9.1875rem 10rem 9.1875rem;
+    text-align: center;
+}
+
+.contactUs h1{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.contactUs span{
+    color: var(--logo-color);
+}
+
+.contactUs p{
+    font-size: 1.0456rem;
+    line-height: 1.75rem;
+    margin-bottom: 6rem;
+}
+
+.contactUsBottomDiv{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    gap: 7.5rem;
+}
+
+.contactLeftDiv{
+    width: 300px;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.contactLeftDivText{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: start;
+    font-size: 24px;
+}
+
+.contactLeftDivText :nth-child(2){
+    color: #616161;
+}
+
+.contactLeftDivText :nth-child(3){
+    color: var(--logo-color);
+}
+.contactLeftDivIcon{
+    display: flex;
+    gap: 1rem;
+}
+
+.contactRightDiv{
+    width: 40.625rem;
+
+}
+.contactRightDiv form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1875rem;
+    color: white;
+}
+
+.topInputDiv{
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.topInputDiv input{
+    width: 20rem;   
+}
+
+.inputDetails{
+    padding: 0.9375rem 0rem 0.9375rem 0.75rem;
+    font-size: 0.9375rem;
+    background-color: #333333;
+    border-radius: 0.5rem;
+
+}
+
+.InputBtn {
+    background-color: var(--button-color);
+    width: 11.125rem;
+    height: 3.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        background-color: var(--button-hover-color);
+    }
+}
+
+@media(max-width: 768px){
+    .contactUs{
+    padding: 160px 32px 160px 32px;
+}
+.contactUsBottomDiv{
+    flex-direction: column;
+    gap: 7.5rem;
+}
+}
+
+@media(max-width: 390px){
+    .contactRightDiv{
+    width: 100%;
+
+}
+.topInputDiv{
+    flex-direction: column;
+    gap: 25px;
+}
+
+} */
+
+
+/* ContactUs.module.css */
+
+.contactSection {
+  padding: 110px 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #6b21a8;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.header p {
+  font-size: 22px;
+  color: #64748b;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Main Content Grid */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Contact Info Side */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoHeader h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e2937;
+  margin-bottom: 8px;
+}
+
+.infoHeader p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Info Cards (Email, Phone, Location) - 3D Style */
+.infoCard {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 15px 25px -8px rgb(0 0 0 / 0.1),
+              0 8px 10px -6px rgb(0 0 0 / 0.06),
+              inset 0 0 0 1px rgb(255 255 255 / 0.7);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.infoCard:hover {
+  transform: translateY(-12px) scale(1.03) rotateX(6deg);
+  box-shadow: 0 30px 50px -15px rgb(0 0 0 / 0.15),
+              0 15px 25px -8px rgb(0 0 0 / 0.12),
+              inset 0 0 0 1px rgb(255 255 255 / 0.9);
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoCard h4 {
+  margin: 0 0 4px 0;
+  font-size: 19px;
+  color: #1e2937;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #334155;
+  font-size: 16.5px;
+}
+
+/* Office Hours Card */
+.officeHoursCard {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  border-radius: 20px;
+  padding: 28px;
+  margin-top: 12px;
+}
+
+.officeHoursCard h3 {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 15.5px;
+}
+
+.hours div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Form Side */
+.messageForm {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 44px;
+  box-shadow: 0 20px 35px -10px rgb(0 0 0 / 0.12),
+              inset 0 0 0 1px rgb(255 255 255 / 0.6);
+}
+
+.messageForm h2 {
+  font-size: 28px;
+  margin-bottom: 32px;
+  color: #1e2937;
+}
+
+.inputGroup {
+  margin-bottom: 22px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.sendButton {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+}
+
+.sendButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px -5px rgb(139 92 246 / 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contactSection {
+    padding: 80px 20px;
+  }
+  .header h1 {
+    font-size: 42px;
+  }
+}

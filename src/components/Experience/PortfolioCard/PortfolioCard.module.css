@@ -1,0 +1,41 @@
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImage{
+    height: 407px;
+    background-color: var(--background-gray);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    align-items: center;    
+    
+}
+
+.cardText{
+    height: auto;
+    margin-top: 1.5rem;
+    color: var(--logo-color);
+}
+
+@media (max-width: 768px) {
+    .cardImage{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+}

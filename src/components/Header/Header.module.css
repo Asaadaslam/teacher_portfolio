@@ -1,0 +1,111 @@
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+     padding-top: 20px;
+}
+
+/* Logo Fix */
+.logo{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+   
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 5.25rem;
+    background-color: var(--background-black);
+    padding: 1.5rem 2.6875rem;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav h1{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+    font-family: var(--font-caveat);
+    color: var(--logo-color);
+}
+
+.navUl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navUl li{
+    list-style: none;
+    font-size: 14.36px;
+    font-weight: 900;
+    line-height: 27px;
+    color: var(--logo-color);
+    letter-spacing: 0.9px;
+
+    &:hover{
+    color: var(--white);
+    }
+}
+
+.navUl li a{
+    color: var(--logo-color);
+    text-decoration: none;
+      &:hover{
+    color: #10B981 ;
+    }
+    
+}
+
+  .menu{
+        display: none;
+    }
+
+@media(max-width: 780px){
+    .navUl{
+        display: none;
+    }
+    
+    .menu{
+        display: block;
+    }
+
+.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5.25rem;
+    left: 0;
+    width: 40%;
+    height: 70vh;
+    background-color: white;
+    gap: 15px;
+    padding: 0px 10px;
+    color: black;
+
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.navUl li a{
+    color: black;
+}
+}
+
+

@@ -1,0 +1,95 @@
+.about{
+    position: relative;
+    width: 100%;
+    background: #F9FAFB; /* light clean background */
+    padding: 10rem 3.5rem 0rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* IMPORTANT for glow */
+}
+
+/* 🔵 BLUE GLOW */
+.about::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #1E3A8A, transparent 70%);
+    top: 50px;
+    left: 50px;
+    filter: blur(100px);
+    opacity: 0.25;
+}
+
+/* 🟢 GREEN GLOW */
+.about::after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #10B981, transparent 70%);
+    bottom: 50px;
+    right: 50px;
+    filter: blur(100px);
+    opacity: 0.25;
+}
+
+/* 👇 Keep content above glow */
+.about > *{
+    position: relative;
+    z-index: 2;
+}
+
+.aboutleftdiv{
+    width: 40.70%;
+}
+
+.aboutleftdiv h1{
+    font-size: 3rem;
+    line-height: 4.5rem;
+    margin-bottom: 0.5rem;
+    color : var(--logo-color);
+}
+
+.aboutleftdiv p{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color : #10B981 ;
+    margin-bottom: 0.5rem;
+}
+
+.detailsText{
+    margin-top: 1.4688rem;
+    font-size: 1.055rem;
+    line-height: 1.6875rem;
+    color: black;
+    margin-bottom:2.0313rem;
+}
+
+.aboutrightdiv{
+    margin-right: 4.1rem;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+ .about{
+    padding: 60px 40px 160px 40px;
+ }
+
+.aboutrightdiv{
+    margin-right: 0px;
+
+}
+}
+@media (max-width: 390px) {
+ .about{
+    padding: 10px 0px 50px 10px;
+    flex-direction: column;
+ }
+ .aboutleftdiv{
+    width: 90%;
+}
+
+
+}

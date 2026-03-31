@@ -1,0 +1,135 @@
+/* .testimonials{
+    width: 100%;
+    background-color: var(--background-black);
+    padding: 9.625rem 2.5rem 10rem 2.5rem;
+    text-align: center;
+}
+
+.testimonials h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 5.625rem;
+}
+
+.testimonials span{
+    color: var(--logo-color);
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+ */
+
+/* components/Experience/Testimonials.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 36px 32px 32px;
+  height: 100%;
+  box-shadow: 
+    0 15px 30px -8px rgb(0 0 0 / 0.1),
+    0 8px 15px -5px rgb(0 0 0 / 0.06),
+    0 0 0 1px rgb(255 255 255 / 0.7) inset;
+  
+  opacity: 0;
+  transform: translateY(50px) scale(0.96) rotateX(10deg);
+  animation: cardPop 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+@keyframes cardPop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+}
+
+.card:hover {
+  transform: 
+    translateY(-16px) 
+    scale(1.04) 
+    rotateX(8deg) 
+    rotateY(6deg);
+  box-shadow: 
+    0 35px 60px -12px rgb(0 0 0 / 0.16),
+    0 20px 30px -8px rgb(0 0 0 / 0.12),
+    0 0 0 1px rgb(255 255 255 / 0.9) inset;
+}
+
+/* Quote icon */
+.quoteIcon {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  font-size: 52px;
+  color: #e0f2fe;
+  line-height: 1;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+/* Rating stars */
+.rating {
+  color: #fbbf24;
+  font-size: 24px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+/* Quote text */
+.quote {
+  font-size: 17.5px;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+/* Person info */
+.person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f3e8ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.name {
+  margin: 0 0 4px 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.role {
+  margin: 0;
+  font-size: 14.5px;
+  color: #6b7280;
+  line-height: 1.4;
+}

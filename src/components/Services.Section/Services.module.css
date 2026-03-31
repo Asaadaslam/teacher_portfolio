@@ -1,0 +1,95 @@
+/* .services{
+    width: 100%;
+    background-color: #F9FAFB;
+    text-align: center;
+    padding: 9.625rem 2.5rem 10rem 2.5rem;
+}
+
+.services h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    color: #10B981;
+
+}
+
+.services span{
+    color: #1E3A8A
+}
+
+.services p{
+    font-size: 1.0456rem;
+    line-height: 1.75rem;
+    margin-bottom: 5rem;
+}
+
+.servicesCardDiv{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4 , 1fr);
+}
+@media (max-width:768) {
+    .servicesCardDiv{
+    grid-template-columns: repeat(2 , 1fr);
+}
+}
+@media (max-width:390) {
+    .servicesCardDiv{
+    grid-template-columns: repeat(1 , 1fr);
+}
+} */
+
+.services {
+    width: 100%;
+    background: #F9FAFB;
+    text-align: center;
+    padding: 8rem 2.5rem 6rem 2.5rem;
+}
+
+.servicesHeading {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #6D5EF8;
+    font-weight: 700;
+}
+
+.servicesHeading span {
+    color: #6D5EF8;
+}
+
+.services p {
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+    margin-bottom: 4rem;
+    color: #5B6472;
+}
+
+.servicesCardDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+    .servicesCardDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services {
+        padding: 6rem 1rem 4rem 1rem;
+    }
+
+    .servicesHeading {
+        font-size: 2.25rem;
+    }
+
+    .servicesCardDiv {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
